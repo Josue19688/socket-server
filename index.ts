@@ -1,14 +1,15 @@
 
 import express from 'express';
 import cors from 'cors';
-import Server from "./classes/server";
+
 import { SERVER_PORT } from "./globals/enviroments";
 import { router } from "./routes/router";
+import ServerSocket from './classes/server';
 
 
 
 
-const server = new Server();
+const server = ServerSocket.instance;
 
 server.app.use(express.json());
 
